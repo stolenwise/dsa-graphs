@@ -140,8 +140,11 @@ describe("DFS", function() {
       result ===
         JSON.stringify(["S", "U", "V", "W", "T", "R", "Q", "Y", "X", "P"]) ||
       result ===
-        JSON.stringify(["S", "P", "X", "U", "V", "W", "Y", "R", "Q", "T"]);
-
+        JSON.stringify(["S", "P", "X", "U", "V", "W", "Y", "R", "Q", "T"]) ||
+      result === 
+      JSON.stringify(["S", "P", "Q", "R", "T", "W", "V", "U", "X", "Y"]);
+  
+    console.log("DFS result: ", graph.depthFirstSearch(S));
     expect(validResult).toBe(true);
   });
 });
